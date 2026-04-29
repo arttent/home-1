@@ -10,7 +10,8 @@ Hero section content centered horizontally and vertically across all viewport si
 Artist blocks use rectangular visuals with names placed in the lower left.  
 Logo only on the left side of the navbar, significantly larger than before, scaling down appropriately on mobile.  
 Navigation buttons positioned on the right side of the navbar.  
-Mobile navigation menu icon sized for clear tap targets.
+Mobile navigation menu icon sized for clear tap targets.  
 
 Technical / Structural Requirements  
-Single-page marketing site.
+Single-page marketing site.  
+Use the provided custom favicon.
