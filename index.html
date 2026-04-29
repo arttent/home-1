@@ -171,10 +171,47 @@
         .navbar-arttent.navbar-solid .navbar-wordmark-tent {
             color: rgb(234, 165, 6);
         }
+        .navbar-brand {
+            flex-shrink: 1;
+            min-width: 0;
+        }
+
         .navbar-brand img {
             display: inline-block;
-            max-height: 7.5rem;
+            height: clamp(2rem, 8vw, 7.5rem);
             width: auto;
+            max-width: min(70vw, 18rem);
+            object-fit: contain;
+        }
+
+        .navbar-toggler {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+            color: #f3f4f6;
+            border-radius: 999px;
+            background-color: rgba(17, 24, 39, 0.45);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .navbar-toggler:hover,
+        .navbar-toggler:focus {
+            background-color: rgba(17, 24, 39, 0.7);
+            color: #ffffff;
+            box-shadow: none;
+        }
+
+        .navbar-toggler .bi-list {
+            font-size: 1.75rem;
+            line-height: 1;
+        }
+
+        .navbar-arttent.navbar-solid .navbar-toggler {
+            color: var(--color-dark);
+            background-color: rgba(17, 24, 39, 0.06);
         }
 
         .nav-link {
@@ -479,6 +516,47 @@
         }
 
         @media (max-width: 991.98px) {
+            .navbar-arttent .page-container {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                column-gap: 0.75rem;
+            }
+
+            .navbar-arttent .navbar-toggler {
+                order: 1;
+                justify-self: start;
+            }
+
+            .navbar-arttent .navbar-brand {
+                order: 2;
+                justify-self: end;
+            }
+
+            .navbar-arttent .navbar-collapse {
+                order: 3;
+                grid-column: 1 / -1;
+                margin-top: 0.75rem;
+                padding: 0.875rem 1rem;
+                border-radius: 1rem;
+                background-color: rgba(17, 24, 39, 0.88);
+                backdrop-filter: blur(14px);
+            }
+
+            .navbar-arttent.navbar-solid .navbar-collapse {
+                background-color: rgba(249, 250, 251, 0.97);
+                border: 1px solid var(--color-border);
+            }
+
+            .navbar-arttent .navbar-nav {
+                gap: 0.5rem !important;
+            }
+
+            .navbar-arttent .nav-link {
+                display: block;
+                padding: 0.5rem 0;
+            }
+
             .hero-content {
                 text-align: center;
             }
