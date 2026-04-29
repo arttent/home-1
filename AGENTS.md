@@ -8,7 +8,8 @@ Design Preferences
 Clean, contemporary, art‑focused presentation.  
 Hero section content centered horizontally and vertically across all viewport sizes, with responsive scaling.  
 Artist blocks use rectangular visuals with names placed in the lower left.  
-Logo placed on the right side of the page and significantly larger than before, while scaling down appropriately on mobile.  
+Logo only on the left side of the navbar, significantly larger than before, scaling down appropriately on mobile.  
+Navigation buttons positioned on the right side of the navbar.  
 Mobile navigation menu icon sized for clear tap targets.
 
 Technical / Structural Requirements  

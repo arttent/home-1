@@ -137,6 +137,13 @@
             transition: box-shadow 0.2s ease, background-color 0.2s ease, border-bottom-color 0.2s;
         }
 
+        .navbar-arttent .page-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
         .navbar-arttent.navbar-solid {
             background-color: var(--color-bg-main);
             border-bottom: 1px solid var(--color-border);
@@ -182,6 +189,14 @@
             width: auto;
             max-width: min(70vw, 18rem);
             object-fit: contain;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
         }
 
         .navbar-toggler {
@@ -518,17 +533,17 @@
         @media (max-width: 991.98px) {
             .navbar-arttent .page-container {
                 display: grid;
-                grid-template-columns: auto 1fr;
+                grid-template-columns: minmax(0, 1fr) auto;
                 align-items: center;
                 column-gap: 0.75rem;
             }
 
-            .navbar-arttent .navbar-toggler {
+            .navbar-arttent .navbar-brand {
                 order: 1;
                 justify-self: start;
             }
 
-            .navbar-arttent .navbar-brand {
+            .navbar-arttent .navbar-toggler {
                 order: 2;
                 justify-self: end;
             }
@@ -972,11 +987,15 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-arttent fixed-top" aria-label="Main navigation">
         <div class="container-fluid page-container">
+            <a class="navbar-brand" href="#hero" aria-label="ARTTENT home">
+                <img src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/LOGO%20arttent%20galleries%20(2).jpg" alt="ARTTENT logo" loading="lazy">
+                <span class="navbar-wordmark-art visually-hidden">ART</span><span class="navbar-wordmark-tent visually-hidden">TENT</span>
+            </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="bi bi-list" aria-hidden="true"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-start" id="navbarMain">
-                <ul class="navbar-nav mb-3 mb-lg-0 gap-3">
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mb-3 mb-lg-0 gap-3 gap-lg-4">
                     <li class="nav-item">
                         <a class="nav-link" href="#benefits">Benefits</a>
                     </li>
@@ -991,10 +1010,6 @@
                     </li>
                 </ul>
             </div>
-            <a class="navbar-brand" href="#hero" aria-label="ARTTENT home">
-                <img src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/LOGO%20arttent%20galleries%20(2).jpg" alt="ARTTENT logo" loading="lazy">
-                <span class="navbar-wordmark-art visually-hidden">ART</span><span class="navbar-wordmark-tent visually-hidden">TENT</span>
-            </a>
         </div>
     </nav>
 </header>
