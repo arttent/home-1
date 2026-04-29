@@ -190,6 +190,12 @@
             width: auto;
             max-width: min(70vw, 18rem);
             object-fit: contain;
+            filter: invert(1);
+            transition: filter 0.2s ease;
+        }
+
+        .navbar-arttent.navbar-solid .navbar-brand img {
+            filter: none;
         }
 
         .navbar-collapse {
@@ -989,7 +995,7 @@
     <nav class="navbar navbar-expand-lg navbar-arttent fixed-top" aria-label="Main navigation">
         <div class="container-fluid page-container">
             <a class="navbar-brand" href="#hero" aria-label="ARTTENT home">
-                <img src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/LOGO%20arttent%20galleries%20(2).jpg" alt="ARTTENT logo" loading="lazy">
+                <img src="https://cdn.breba.app/68d416f8d502012f1b75ec72/acffaf48e69b4ed78bac97ce8f9421f8/assets/arttent_logo_transparent_bg.webp" alt="ARTTENT logo" loading="eager" fetchpriority="high">
                 <span class="navbar-wordmark-art visually-hidden">ART</span><span class="navbar-wordmark-tent visually-hidden">TENT</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
